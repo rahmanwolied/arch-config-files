@@ -4,7 +4,7 @@
 	ci = commit
 	st = status
 [pull]
-	rebase = true
+	rebase = false
 [init]
 	defaultBranch = main
 [user]
@@ -18,3 +18,9 @@
 [credential "https://gist.github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
+[url "git@github-work:PoI-consensus/"]
+	insteadOf = https://github.com/PoI-consensus/
+[url "git@github-work:lightchain-protocol/"]
+	insteadOf = https://github.com/lightchain-protocol/
+[url "git@github.com:"]
+	insteadof = https://github.com/
