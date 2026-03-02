@@ -1,9 +1,171 @@
+# Ignore everything by default
 *
-!gh
-!ghostty
-!gh
-!hypr
-!omarchy
-!.bashrc
+
+# Then explicitly allow config directories and files
+# This whitelist approach ensures sensitive data is never accidentally committed
+
+# ============================================================
+# Configuration Files to Track
+# ============================================================
+
+# Window Manager & Desktop Environment
+!hypr/
+!hypr/**
+
+!waybar/
+!waybar/**
+
+!mako/
+!mako/**
+
+!swayosd/
+!swayosd/**
+
+!walker/
+!walker/**
+
+# Terminal Emulators
+!alacritty/
+!alacritty/**
+
+!kitty/
+!kitty/**
 !.gitignore
-!.profile
+!yazi
+!lazydocker
+
+!ghostty/
+!ghostty/**
+
+# Shell & Prompt
+!starship.toml
+
+# Text Editors
+!nvim/
+!nvim/**
+
+# Development Tools
+!git/
+!git/config
+
+!gh/
+!gh/**
+
+!lazygit/
+!lazygit/**
+
+# System Config
+!environment.d/
+!environment.d/**
+
+!systemd/
+!systemd/user/
+!systemd/user/**
+
+!fontconfig/
+!fontconfig/**
+
+# Input Methods
+!fcitx5/
+!fcitx5/conf/
+!fcitx5/conf/**
+!fcitx5/profile
+
+# Package Managers
+!pnpm/
+!pnpm/rc
+
+# Applications
+!btop/
+!btop/**
+
+!fastfetch/
+!fastfetch/**
+
+!qalculate/
+!qalculate/**
+
+!xournalpp/
+!xournalpp/**
+
+# Omarchy (window manager theme)
+!omarchy/
+!omarchy/branding/
+!omarchy/branding/**
+!omarchy/current/
+!omarchy/current/**
+!omarchy/themes/
+!omarchy/themes/**
+!omarchy.ttf
+
+# Browser flags (no sensitive data)
+!brave-flags.conf
+!chromium-flags.conf
+
+# XDG Config
+!user-dirs.dirs
+!user-dirs.locale
+!mimeapps.list
+
+# ============================================================
+# Sensitive/Private Data to Always Ignore
+# ============================================================
+
+# Password Managers
+1Password/
+
+# Browsers (contain cookies, history, passwords, session data)
+chromium/
+BraveSoftware/
+google-chrome/
+google-chrome-beta/
+google-chrome-unstable/
+microsoft-edge-dev/
+vivaldi/
+vivaldi-snapshot/
+
+# Messaging Apps
+Signal/
+
+# Notes (may contain private information)
+obsidian/
+
+# Music (contains auth tokens)
+spotify/
+
+# IDEs (contains workspace state, cache, logs)
+Cursor/
+
+# Runtime/State Files
+pulse/
+dconf/
+ibus/
+fcitx/dbus/
+uwsm/
+go/telemetry/
+
+# Typora (may contain recent file history)
+Typora/
+
+# Additional file patterns to ignore
+*.log
+*.cache
+*.lock
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+*-journal
+
+# Cache and temporary directories
+Cache/
+cache/
+**/Cache/
+**/cache/
+logs/
+**/logs/
+blob_storage/
+**/blob_storage/
+
