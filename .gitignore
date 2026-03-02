@@ -89,13 +89,13 @@
 !xournalpp/**
 
 # Omarchy (window manager theme)
-!omarchy/
-!omarchy/branding/
-!omarchy/branding/**
-!omarchy/current/
-!omarchy/current/**
-!omarchy/themes/
-!omarchy/themes/**
+# omarchy/
+# omarchy/branding/
+# omarchy/branding/**
+# omarchy/current/
+# omarchy/current/**
+# omarchy/themes/
+# omarchy/themes/**
 !omarchy.ttf
 
 # Browser flags (no sensitive data)
