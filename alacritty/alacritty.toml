@@ -14,7 +14,7 @@ padding.x = 14
 padding.y = 14
 decorations = "None"
 
-[keyboard]
-bindings = [
-{ key = "F11", action = "ToggleFullscreen" }
-]
+[[keyboard.bindings]]
+key = "Return"
+mods = "Shift"
+chars = "\u001B\r"
