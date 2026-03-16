@@ -1,0 +1,48 @@
+layout {
+    default_tab_template {
+        children
+        pane size=1 borderless=true {
+            plugin location="file:/home/rahmanwolied/.config/zellij/plugins/zjstatus.wasm" {
+                format_left   "{mode}#[fg=#a7c080,bold] {session}"
+                format_center "{tabs}"
+                format_right  "{command_git_branch} {datetime}"
+
+                border_format   "#[fg=#6C7086]{char}"
+                border_position "top"
+                mode_normal        "#[bg=#a7c080,fg=#2d353b,bold] NORMAL "
+                mode_tmux          "#[bg=#d699b6,fg=#2d353b,bold] TMUX "
+                mode_locked        "#[bg=#e67e80,fg=#2d353b,bold] LOCKED "
+                mode_pane          "#[bg=#7fbbb3,fg=#2d353b,bold] PANE "
+                mode_tab           "#[bg=#dbbc7f,fg=#2d353b,bold] TAB "
+                mode_scroll        "#[bg=#83c092,fg=#2d353b,bold] SCROLL "
+                mode_enter_search  "#[bg=#83c092,fg=#2d353b,bold] ENT-SEARCH "
+                mode_search        "#[bg=#83c092,fg=#2d353b,bold] SEARCHARCH "
+                mode_rename_tab    "#[bg=#dbbc7f,fg=#2d353b,bold] RENAME "
+                mode_rename_pane   "#[bg=#7fbbb3,fg=#2d353b,bold] RENAME "
+                mode_move          "#[bg=#d699b6,fg=#2d353b,bold] MOVE "
+                mode_session       "#[bg=#7fbbb3,fg=#2d353b,bold] SESSION "
+                mode_prompt        "#[bg=#7fbbb3,fg=#2d353b,bold] PROMPT "
+
+                tab_normal          "#[fg=#859289] {name} {floating_indicator}"
+                tab_normal_fullscreen "#[fg=#859289] {name} {fullscreen_indicator}"
+                tab_normal_sync     "#[fg=#859289] {name} {sync_indicator}"
+                tab_active          "#[fg=#a7c080,bold,italic] {name} {floating_indicator}"
+                tab_active_fullscreen "#[fg=#a7c080,bold,italic] {name} {fullscreen_indicator}"
+                tab_active_sync     "#[fg=#a7c080,bold,italic] {name} {sync_indicator}"
+                tab_separator       "#[fg=#4a555b] | "
+                tab_sync_indicator       " "
+                tab_fullscreen_indicator " 󰊓"
+                tab_floating_indicator   " 󰉈"
+
+                command_git_branch_command     "git rev-parse --abbrev-ref HEAD"
+                command_git_branch_format      "#[fg=#7fbbb3] {stdout} "
+                command_git_branch_interval    "10"
+                command_git_branch_rendermode  "static"
+
+                datetime          "#[fg=#859289,bold] {format} "
+                datetime_format   "%d %b %Y %H:%M"
+                datetime_timezone "Asia/Dhaka"
+            }
+        }
+    }
+}
